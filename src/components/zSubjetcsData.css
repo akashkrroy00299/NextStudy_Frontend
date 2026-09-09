@@ -1,0 +1,183 @@
+/* subject-dat-body */
+.subject-dat-body {
+    padding: 1rem;
+    background: var(--base-clr-01);
+    border: 1px solid var(--border-clr-01);
+    border-radius: 0.75rem;
+    min-width: 0;
+    height: 100%;
+}
+
+.subject-dat-body .section-heading {
+    font-family: "ClashDisplay", "Poppins", sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-clr-01);
+    margin-bottom: 1rem;
+}
+
+.body-subjets {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.25rem;
+}
+
+.subjets-bar {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    min-width: 0;
+}
+
+.subjets-bar .info {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 0.5rem;
+}
+
+.subjets-bar .title {
+    font-family: "ClashDisplay", "Poppins", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-clr-01);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0;
+}
+
+.subjets-bar .numbers {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    flex-shrink: 0;
+}
+
+.subjets-bar .numbers .percent-label {
+    font-family: "SFMono-Regular", "Menlo", "Consolas", monospace;
+    font-size: 0.78rem;
+    font-weight: 700;
+    color: white;
+    padding: 0.1rem 0.3rem;
+    border-radius: 0.4rem;
+}
+
+.subjets-bar .numbers > span:not(.percent-label) {
+    font-family: "SFMono-Regular", "Menlo", "Consolas", monospace;
+    font-size: 0.68rem;
+    color: var(--text-clr-02);
+    letter-spacing: 0.01em;
+    white-space: nowrap;
+}
+
+.subjets-bar .bar-row {
+    display: flex;
+    align-items: center;
+}
+
+.progress-track {
+    flex: 1;
+    height: 6px;
+    background: var(--base-clr-02);
+    border: 1px solid var(--border-clr-01);
+    border-radius: 999px;
+    overflow: hidden;
+}
+
+.progress-fill {
+    height: 100%;
+    border-radius: 999px;
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: brightness(0.75);
+}
+
+@media (max-width: 640px) {
+    .body-subjets {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* attendance log styel */
+
+.subject-dat-body.cls{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.subject-dat-body.cls {
+    padding-bottom: 1rem;
+}
+
+
+.class_body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.log-row {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0.75rem 1.4rem;
+    background: color-mix(in srgb, var(--event-color, var(--text-clr-02)) 10%, var(--base-clr-02));
+    border-left: 3px solid var(--event-color, var(--text-clr-02));
+    border-radius: 0.75rem;
+}
+
+.log-space {
+    flex-shrink: 0;
+}
+
+.log-title {
+    font-family: "ClashDisplay", "Poppins", sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-clr-01);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex-shrink: 0;
+    max-width: 160px;
+}
+
+.log-status {
+    font-family: "SFMono-Regular", "Menlo", "Consolas", monospace;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.log-status.attended {
+    color: #0ea5e9;
+    background: color-mix(in srgb, #0ea5e9 15%, transparent);
+}
+
+.log-status.missed {
+    color: #ef4444;
+    background: color-mix(in srgb, #ef4444 15%, transparent);
+}
+
+.log-time,
+.log-date {
+    font-family: "SFMono-Regular", "Menlo", "Consolas", monospace;
+    font-size: 0.7rem;
+    color: var(--text-clr-02);
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+    .log-date,
+    .log-row .log-space:last-of-type,
+    .log-row .log-space:nth-of-type(4) {
+        display: none;
+    }
+}

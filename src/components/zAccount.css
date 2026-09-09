@@ -1,0 +1,113 @@
+.account_panel h3 {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--text-clr-01);
+  margin: 0 0 6px;
+}
+
+.account_lede {
+  color: var(--text-clr-04);
+  font-size: 14px;
+  margin: 0 0 28px;
+  max-width: 48ch;
+}
+
+/* * PROFILE IMAGE */
+
+.profule_image {
+  display: flex;
+  justify-content: center;
+  max-width: 340px;
+  margin-bottom: 28px;
+}
+
+.avatar_upload_btn {
+  appearance: none;
+  -webkit-appearance: none;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  padding: 0;
+  border: none;
+  background: none;
+  border-radius: 50%;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.avatar_upload_overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--base-clr-01, #000) 55%, transparent);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  pointer-events: none;
+}
+
+.avatar_upload_btn:hover .avatar_upload_overlay,
+.avatar_upload_btn:focus-visible .avatar_upload_overlay {
+  opacity: 1;
+}
+
+.avatar_upload_btn:focus-visible {
+  outline: 2px solid var(--royal-blue);
+  outline-offset: 2px;
+}
+
+/* * FIELDS */
+
+.field {
+  margin-bottom: 18px;
+  max-width: 340px;
+}
+
+.field label {
+  display: block;
+  font-size: 13px;
+  color: var(--text-clr-04);
+  margin-bottom: 6px;
+}
+
+.field input {
+  width: 100%;
+  background-color: var(--base-clr-02);
+  border: 1px solid var(--border-clr-01);
+  color: var(--text-clr-02);
+  font-size: 14px;
+  padding: 10px 12px;
+  border-radius: 7px;
+  outline: none;
+  transition: border-color .15s ease, background-color .15s ease, box-shadow .15s ease;
+}
+
+.field input:hover {
+  background-color: var(--hover-clr-01);
+}
+
+.field input:focus {
+  border-color: var(--royal-blue);
+  box-shadow: 0 2px 8px var(--shadow-clr-01);
+}
+
+.field input::placeholder {
+  color: var(--base-clr-04);
+}
+
+.field input:disabled {
+  background-color: var(--base-clr-02);
+  color: var(--text-clr-04);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.field input:disabled:hover {
+  background-color: var(--base-clr-02);
+}

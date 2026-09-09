@@ -1,0 +1,50 @@
+:root[data-theme="DARK"] {
+    color-scheme: dark;
+
+    --base-clr-01: #1c1d1f;
+    --base-clr-02: #18191b;
+    --base-clr-03: #37404f;
+    --base-clr-04: #B1B2B5;
+
+    --text-clr-01: #ffffff;
+    --text-clr-02: #f0f1f5;
+    --text-clr-03: #e0e4eb;
+    --text-clr-04: #bfc6d4;
+
+    --shadow-clr-01: rgba(0, 0, 0, 0.5);
+    --border-clr-01: rgba(150, 150, 150, 0.2);
+    --hover-clr-01: rgba(150, 150, 150, 0.08);
+
+    --scrollbar-track: rgba(150, 150, 150, 0.08);
+    --scrollbar-thumb: rgba(150, 150, 150, 0.25);
+    --scrollbar-thumb-hover: rgba(150, 150, 150, 0.4);
+}
+
+:root[data-theme="LIGHT"] {
+    color-scheme: light;
+
+    --base-clr-01: #f6f7fb;
+    --base-clr-02: #ffffff;
+    --base-clr-03: #eef0f6;
+    --base-clr-04: #dfe2ec;
+
+    --text-clr-01: #000000;
+    --text-clr-02: #161719;
+    --text-clr-03: #3f424c;
+    --text-clr-04: #6b6f7d;
+
+    --shadow-clr-01: rgba(20, 21, 31, 0.12);
+    --border-clr-01: rgba(20, 21, 31, 0.10);
+    --hover-clr-01: rgba(20, 21, 31, 0.05);
+
+    --scrollbar-track: rgba(20, 21, 31, 0.04);
+    --scrollbar-thumb: rgba(20, 21, 31, 0.18);
+    --scrollbar-thumb-hover: rgba(20, 21, 31, 0.28);
+}
+
+:root {
+    --royal-blue: #014bba;
+    --forest-green: #e0ffc2;
+    --crimson-red: #dd0426;
+    --light-crime: #f8f3f0;
+}

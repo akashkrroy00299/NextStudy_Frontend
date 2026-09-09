@@ -1,0 +1,18 @@
+.attendances-layout{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    gap: 1rem;
+}
+
+.calender-layout{
+    width: 100%;
+}
+
+.analythis{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}

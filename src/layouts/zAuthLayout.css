@@ -1,0 +1,128 @@
+/* auth layout style */
+.auth-layout {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--base-clr-01);
+
+  --x: 50%;
+  --y: 50%;
+
+  /* Layer 1: Base dots */
+  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1.25px, transparent 1.25px);
+  background-size: 24px 24px;
+  background-position: -0.5px -0.5px;
+  overflow: hidden;
+
+  touch-action: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+}
+
+/* Layer 2: glow layer */
+.auth-layout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+
+  background-image: radial-gradient(rgba(255, 255, 255, 1) 1.8px, transparent 1.8px);
+  background-size: 24px 24px;
+  background-position: -0.5px -0.5px;
+
+  filter: drop-shadow(0 0 6px rgba(0, 255, 204, 0.8));
+
+  -webkit-mask-image: radial-gradient(circle 200px at var(--x) var(--y),
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%);
+  mask-image: radial-gradient(circle 200px at var(--x) var(--y),
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0) 100%);
+}
+
+.form-card {
+  height: 26.25rem;
+  width: 22.5rem;
+  border-radius: 0.875rem;
+  background-color: transparent;
+}
+
+/* Base styles for all positioning lines */
+.left-line,
+.right-line,
+.top-line,
+.bottom-line {
+  position: fixed;
+  pointer-events: none;
+}
+
+/* Vertical lines */
+.left-line,
+.right-line {
+  height: 100%;
+  width: 0.125rem;
+  background: repeating-linear-gradient(to bottom,
+      var(--text-clr-04) 0px,
+      var(--text-clr-04) 10px,
+      transparent 10px,
+      transparent 20px);
+
+  opacity: 0.5;
+}
+
+/* Horizontal lines */
+.top-line,
+.bottom-line {
+  height: 0.125rem;
+  width: 100%;
+  background: repeating-linear-gradient(to right,
+      var(--text-clr-04) 0px,
+      var(--text-clr-04) 10px,
+      transparent 10px,
+      transparent 20px);
+
+  opacity: 0.5;
+}
+
+.coord-readout {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 1.5rem;
+  font-family: monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  color: var(--text-clr-04);
+  pointer-events: none;
+}
+
+.ambient-copy {
+  position: absolute;
+  max-width: 20rem;
+  font-size: 0.85rem;
+  line-height: 1.6;
+  color: var(--text-clr-04);
+  font-family: var(--font-family-01);
+}
+
+/* ? fixing input not work bug */
+.left-line,
+.right-line,
+.top-line,
+.bottom-line,
+.ambient-copy,
+.coord-readout {
+  pointer-events: none;
+}
+
+.auth-layout::before,
+.auth-layout::after {
+  pointer-events: none;
+}
+
+.form-card {
+  position: relative;
+  z-index: 10;
+  border-radius: 1rem;
+  overflow: hidden;
+}

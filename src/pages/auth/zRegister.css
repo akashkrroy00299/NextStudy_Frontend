@@ -1,0 +1,231 @@
+/* ==========================================================================
+   Global reset
+   ========================================================================== */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+
+/* ==========================================================================
+   Register page (layout wrapper)
+   ========================================================================== */
+
+.register-page {
+    width: 100%;
+    height: 100%;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: var(--text-clr-01);
+    position: relative;
+}
+
+
+/* ==========================================================================
+   Auth nav (top-right "login" / "sign up" link)
+   ========================================================================== */
+
+.auth-nav {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    position: absolute;
+    top: 0;
+    left: -20px;
+    margin: 1rem 1rem 0 0;
+
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+
+/* ==========================================================================
+   Auth header (title + subtitle)
+   ========================================================================== */
+
+.auth-header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.auth-header p {
+    width: 90%;
+    font-size: 0.6rem;
+    text-align: center;
+}
+
+/* login page uses extra vertical spacing */
+.login-header {
+    padding: 2rem 0;
+}
+
+
+/* ==========================================================================
+   Auth form (inputs + submit button)
+   ========================================================================== */
+
+.auth-form {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+}
+
+.auth-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.auth-form div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    cursor: pointer;
+}
+
+.auth-form div label {
+    font-size: 0.7rem;
+    opacity: 0.7;
+}
+
+.auth-form div input {
+    height: 2.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    outline: none;
+    padding: 1rem;
+    background-color: var(--base-clr-01);
+    color: var(--text-clr-02);
+    transition: border-color 0.2s ease;
+}
+
+.auth-form div input:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* submit button wrapper */
+.auth-form .btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.auth-form .btn button {
+    width: 100%;
+    height: 2.6rem;
+    margin-top: 0.75rem;
+    border: none;
+    border-radius: 0.6rem;
+    position: relative;
+    overflow: hidden;
+
+    background: var(--text-clr-02);
+    color: var(--base-clr-02);
+
+    font-family: "Poppins", sans-serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+
+    transition:
+        transform 0.15s ease,
+        box-shadow 0.2s ease,
+        opacity 0.2s ease,
+        background-color 0.2s ease;
+}
+
+.auth-form .btn button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+.auth-form .btn button:active {
+    transform: scale(0.97);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.auth-form .btn button:focus-visible {
+    outline: none;
+    box-shadow:
+        0 0 0 4px rgba(59, 130, 246, 0.18),
+        0 8px 24px rgba(0, 0, 0, 0.12);
+}
+
+.auth-form .btn button:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* click ripple effect */
+.ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.12);
+    pointer-events: none;
+    transform: scale(0);
+}
+
+
+/* forgot password */
+.forgot-password{
+    width: 100%;
+    font-size: 0.8rem;
+    text-align: end;
+    opacity: 0.8;
+}
+
+/* adding eye btn */
+.password-field {
+    position: relative;
+    width: 100%;
+}
+
+.password-field input {
+    width: 100%;
+    padding-right: 2.8rem; /* room for the eye button */
+}
+
+.eye-btn {
+    position: absolute;
+    right: 0.75rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-clr-02);
+    background: none;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0.5;
+    padding: 0.25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.eye-btn:hover {
+    opacity: 1;
+}

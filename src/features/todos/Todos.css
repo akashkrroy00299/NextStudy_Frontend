@@ -1,0 +1,279 @@
+/* * WRAPPER CSS */
+
+.todos_wrapper {
+    width: 100%;
+    min-height: 30rem;
+    padding: 1.25rem 1.5rem 1.5rem 1.5rem;
+    background: var(--base-clr-01);
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.todos_analythics {
+    font-family: "ClashDisplay", "Poppins", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-clr-01);
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.todos_analythics > p {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: var(--text-clr-02);
+}
+
+/* * NEW TODO CSS */
+
+.new_todos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem 1.125rem;
+    background: color-mix(in srgb, var(--border-clr-01) 35%, transparent);
+    border-radius: 0.5rem;
+}
+
+.todo_input_warapper {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* first row -> input + add, SEPARATE elements */
+
+.todo_input_warapper > div:first-child {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.todo_input_warapper input[type="text"] {
+    flex: 1;
+    min-width: 120px;
+    height: 2.5rem;
+    padding: 0 0.875rem;
+    border: none;
+    border-radius: 0.5rem;
+    background: var(--base-clr-02);
+    color: var(--text-clr-01);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.85rem;
+    outline: none;
+    transition: box-shadow 0.2s ease;
+}
+
+.todo_input_warapper input[type="text"]:focus {
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+}
+
+/* add btn -> mode-btn style from inspiration */
+
+.todo_input_warapper button.add {
+    min-width: 76px;
+    height: 2.5rem;
+    padding: 0 1.25rem;
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    cursor: pointer;
+    background: var(--accent-clr, var(--text-clr-02));
+    color: var(--base-clr-01);
+    transition: filter 0.15s ease, transform 0.1s ease, opacity 0.15s ease;
+}
+
+.todo_input_warapper button.add:hover {
+    filter: brightness(1.12);
+}
+
+.todo_input_warapper button.add:active {
+    transform: scale(0.96);
+}
+
+.todo_input_warapper button.add:disabled {
+    cursor: not-allowed;
+    opacity: 0.6;
+    filter: none;
+    transform: none;
+}
+
+/* second row -> priority + dueDate + category, small chips */
+
+.todo_input_warapper > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 0.375rem;
+    flex-wrap: wrap;
+}
+
+.todo_input_warapper button.add_priority,
+.todo_input_warapper button.dueDate,
+.todo_input_warapper button.add_category {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    height: 1.75rem;
+    padding: 0 0.625rem;
+    border: 1px solid var(--border-clr-01);
+    border-radius: 999px;
+    background: var(--base-clr-01);
+    color: var(--text-clr-02);
+    font-family: "SFMono-Regular", "Menlo", "Consolas", monospace;
+    font-size: 0.68rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s ease;
+}
+
+.todo_input_warapper button.add_priority:hover,
+.todo_input_warapper button.dueDate:hover,
+.todo_input_warapper button.add_category:hover {
+    background: color-mix(in srgb, var(--border-clr-01) 50%, transparent);
+}
+
+.todo_input_warapper button.add_priority svg,
+.todo_input_warapper button.dueDate svg,
+.todo_input_warapper button.add_category svg {
+    width: 14px;
+    height: 14px;
+}
+
+/* * TODOS LIST CSS */
+
+.todos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* row wrapping filter pills + refresh button */
+
+.todos > div:first-child {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    border-bottom: 1px solid var(--border-clr-01);
+    padding-bottom: 0.5rem;
+}
+
+.todos_options_show {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+}
+
+.todos_options_show > div {
+    padding: 0.35rem 0.875rem;
+    border-radius: 999px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    color: var(--text-clr-02);
+    cursor: pointer;
+    transition: background 0.15s ease, color 0.15s ease;
+}
+
+.todos_options_show > div:hover {
+    background: color-mix(in srgb, var(--border-clr-01) 50%, transparent);
+    color: var(--text-clr-01);
+}
+
+.todos_options_show > div.active_show_option {
+    background: var(--accent-clr, var(--text-clr-02));
+    color: var(--base-clr-01);
+}
+
+/* refresh button */
+
+.todos > div:first-child > button {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    height: 1.75rem;
+    padding: 0 0.75rem;
+    border: 1px solid var(--border-clr-01);
+    border-radius: 999px;
+    background: var(--base-clr-01);
+    color: var(--text-clr-02);
+    font-family: "Poppins", sans-serif;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    white-space: nowrap;
+    flex-shrink: 0;
+    transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.todos > div:first-child > button:hover {
+    background: color-mix(in srgb, var(--border-clr-01) 50%, transparent);
+    color: var(--text-clr-01);
+}
+
+.todos > div:first-child > button:active {
+    transform: scale(0.95);
+}
+
+.todos_shoing {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+@media (max-width: 640px) {
+    .todos_wrapper {
+        padding: 1rem;
+    }
+
+    .todos > div:first-child {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+
+    .todos > div:first-child > button {
+        align-self: flex-end;
+    }
+}
+
+.dropdown_wrap {
+    position: relative;
+}
+
+.drop_down_section {
+    position: absolute;
+    top: calc(100% + 6px);
+    left: 0;
+    min-width: 100%;
+    background: var(--base-clr-01);
+    border: 1px solid var(--border-clr-01);
+    border-radius: 0.5rem;
+    overflow: hidden;
+    z-index: 10;
+}
+
+.dorp_down_element {
+    padding: 0.4rem 0.75rem;
+    font-family: "SFMono-Regular", "Menlo", "Consolas", monospace;
+    font-size: 0.7rem;
+    color: var(--text-clr-01);
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.dorp_down_element:hover {
+    background: var(--base-clr-02);
+}

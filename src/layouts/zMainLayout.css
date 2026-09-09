@@ -1,0 +1,18 @@
+.main-layout {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto 1fr;
+    color: var(--text-clr-01);
+    overflow: hidden;
+}
+
+.main-layout-outlet {
+    height: 100vh;
+    overflow-y: auto;
+    min-width: 0;
+}
+
+.outlet-higth {
+    overflow: auto;
+}
