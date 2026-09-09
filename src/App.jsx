@@ -4,6 +4,7 @@ import { useOrientation } from "../src/utils/useOrientation.jsx";
 import { useAuthInit } from './config/useAuthInit.js';
 import { UserProvider } from './context/UserContext.jsx'
 import { TodoProvider } from "./context/TodoContext.jsx"
+import { NotificationProvider } from './features/Notifications/context/notificationContext.jsx';
 import ProtectedRoute from "./components/ProtectedRoute.jsx"
 import AppLoadingScreen from "./utils/AppLoadingScreen.jsx"
 import ThemeSync from './utils/ThemeSync.jsx';
@@ -29,7 +30,7 @@ import Attendances from "./pages/app/Attendances.jsx"
 import Habits from "./pages/app/Habits.jsx"
 import Todos from "./features/todos/Todos.jsx"
 import Events from "./pages/app/Events.jsx"
-import Notification from './pages/app/Notification.jsx';
+import Notification from './features/Notifications/Notification.jsx';
 
 import AdminDashboard from "./pages/admin/AdminDashboard.jsx"
 import Users from "./pages/admin/Users.jsx"
@@ -83,7 +84,11 @@ const App = () => {
             <Route path='appearance' element={<Appearance />} />
             <Route path='logout' element={<Logout />} />
           </Route>
-          <Route path="notifications" element={<Notification />} />
+          <Route path="notifications" element={
+            <NotificationProvider>
+              <Notification />
+            </NotificationProvider>
+          } />
         </Route>
 
         {/* Admin pages require an authenticated session; admin APIs must enforce roles server-side. */}
