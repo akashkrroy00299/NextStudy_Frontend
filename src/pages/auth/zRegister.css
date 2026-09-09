@@ -33,23 +33,30 @@
 
 .auth-nav {
     width: auto;
+    min-height: 2.35rem;
     display: flex;
     align-items: center;
-    justify-content: end;
-    gap: 0.35rem;
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.01em;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: inherit;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
     position: absolute;
-    top: 0.75rem;
-    right: 0.85rem;
+    top: 1rem;
+    right: 1rem;
     left: auto;
     margin: 0;
-    padding: 0.35rem 0.7rem;
+    padding: 0.45rem 0.8rem 0.45rem 0.95rem;
     border-radius: 999px;
-    color: var(--text-clr-03);
-    background: var(--hover-clr-01);
+    color: var(--text-clr-02);
+    background: color-mix(in srgb, var(--base-clr-01) 72%, transparent);
+    border: 1px solid var(--border-clr-01);
+    box-shadow: 0 4px 14px var(--shadow-clr-01);
     cursor: pointer;
+    transition: color 0.2s ease, background-color 0.2s ease,
+        border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
 
     user-select: none;
     -webkit-user-select: none;
@@ -57,7 +64,28 @@
 }
 
 .auth-nav:hover {
-    color: var(--text-clr-01);
+    color: var(--accent-clr);
+    background: color-mix(in srgb, var(--accent-clr) 10%, var(--base-clr-02));
+    border-color: color-mix(in srgb, var(--accent-clr) 45%, var(--border-clr-01));
+    box-shadow: 0 6px 18px var(--shadow-clr-01);
+    transform: translateY(-1px);
+}
+
+.auth-nav:active {
+    transform: translateY(0) scale(0.97);
+}
+
+.auth-nav:focus-visible {
+    outline: 3px solid var(--accent-soft);
+    outline-offset: 2px;
+}
+
+.auth-nav svg {
+    transition: transform 0.2s ease;
+}
+
+.auth-nav:hover svg {
+    transform: translateX(2px);
 }
 
 
@@ -96,6 +124,10 @@
 /* login page uses extra vertical spacing */
 .login-header {
     padding: 2.25rem 0 1.25rem;
+}
+
+.register-header {
+    padding: 2.25rem 0 0.75rem;
 }
 
 

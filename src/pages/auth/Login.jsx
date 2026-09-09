@@ -178,7 +178,10 @@ const Login = () => {
 
   return (
     <div className="register-page">
-      <div className="auth-nav" onClick={() => navigate("/auth/register")}> sign up <AnglesRight2 size={24} /> </div>
+      <button className="auth-nav" type="button" onClick={() => navigate("/auth/register")}>
+        <span>Sign up</span>
+        <AnglesRight2 size={18} aria-hidden="true" />
+      </button>
       <div className="auth-header login-header">
         <h3 className='auth-header-h'>Login with Email</h3>
         <p className="auth-header-p">Welcome back — log in to keep tracking your <span>tasks, habits, and schedule</span></p>

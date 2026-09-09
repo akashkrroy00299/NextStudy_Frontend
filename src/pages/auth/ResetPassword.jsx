@@ -254,7 +254,10 @@ const ResetPassword = () => {
 
   return (
     <div className="register-page">
-      <div className="auth-nav" onClick={() => navigate("/auth/login")}> login <AnglesRight2 size={24} /> </div>
+      <button className="auth-nav" type="button" onClick={() => navigate("/auth/login")}>
+        <span>Log in</span>
+        <AnglesRight2 size={18} aria-hidden="true" />
+      </button>
 
       {step === "email" && (
         <>

@@ -233,8 +233,11 @@ const Register = () => {
 
   return (
     <div className="register-page">
-      <div className="auth-nav" onClick={() => navigate("/auth/login")}> login <AnglesRight2 size={24} /> </div>
-      <div className="auth-header">
+      <button className="auth-nav" type="button" onClick={() => navigate("/auth/login")}>
+        <span>Log in</span>
+        <AnglesRight2 size={18} aria-hidden="true" />
+      </button>
+      <div className="auth-header register-header">
         <h3 className='auth-header-h'>Sign in with Email</h3>
         <p className="auth-header-p">Create your <span>Account</span> and start organizing your tasks, habits, and schedule in one place</p>
       </div>
