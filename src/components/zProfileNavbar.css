@@ -46,7 +46,7 @@
 .profile_more div.active {
   background-color: var(--hover-clr-01);
   color: var(--text-clr-01);
-  border-left: 2px solid var(--royal-blue);
+  border-left: 2px solid var(--accent-clr);
 }
 
 .profile_more div:last-child {

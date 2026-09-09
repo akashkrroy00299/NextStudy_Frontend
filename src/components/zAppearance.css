@@ -31,7 +31,7 @@
 }
 
 .theme_wrapper.selected {
-  border-color: var(--royal-blue);
+  border-color: var(--accent-clr);
 }
 
 .theme_gradinet {
@@ -64,7 +64,7 @@
 }
 
 .accent_clr_wrapper.selected {
-  border-color: var(--royal-blue);
+  border-color: var(--accent-clr);
   color: var(--text-clr-02);
 }
 
@@ -153,13 +153,13 @@
 }
 
 .toggle_btn.on {
-  background-color: rgba(1, 75, 186, 0.18);
-  border-color: var(--royal-blue);
+  background-color: var(--accent-soft);
+  border-color: var(--accent-clr);
 }
 
 .toggle_btn.on::after {
   transform: translateX(18px);
-  background-color: var(--royal-blue);
+  background-color: var(--accent-clr);
 }
 
 .navbar_style {
@@ -183,7 +183,7 @@
 }
 
 .option_navstyle.selected {
-  border-color: var(--royal-blue);
+  border-color: var(--accent-clr);
 }
 
 .option_navstyle_name {

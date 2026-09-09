@@ -20,8 +20,11 @@
 }
 
 .sidebar-header .app-name {
+  font-family: var(--font-display);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 1.05rem;
+  letter-spacing: -0.04em;
+  color: var(--text-clr-01);
   white-space: nowrap;
   overflow: hidden;
   flex: 1;
@@ -58,9 +61,10 @@
   justify-content: center;
   gap: 0.75rem;
   padding: 0.6rem 0.75rem;
-  border-radius: 0.5rem;
+  border-radius: var(--radius-md);
   cursor: pointer;
   opacity: 0.75;
+  transition: background-color 0.15s ease, opacity 0.15s ease;
 }
 .option:hover {
   background-color: var(--hover-clr-01);

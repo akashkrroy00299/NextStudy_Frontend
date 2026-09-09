@@ -5,7 +5,7 @@
     padding: 0.75rem 0.875rem;
     background: var(--base-clr-02);
     border: 1px solid var(--border-clr-01);
-    border-radius: 0.5rem;
+    border-radius: var(--radius-md);
     transition: background 0.15s ease, opacity 0.15s ease;
     width: 100%;
 }

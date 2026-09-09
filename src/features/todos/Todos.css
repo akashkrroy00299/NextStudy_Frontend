@@ -60,8 +60,9 @@
     height: 2.5rem;
     padding: 0 0.875rem;
     border: none;
-    border-radius: 0.5rem;
+    border-radius: var(--radius-sm);
     background: var(--base-clr-02);
+    border: 1px solid var(--border-clr-01);
     color: var(--text-clr-01);
     font-family: "Poppins", sans-serif;
     font-size: 0.85rem;
@@ -70,7 +71,7 @@
 }
 
 .todo_input_warapper input[type="text"]:focus {
-    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    box-shadow: 0 0 0 3px var(--accent-soft);
 }
 
 /* add btn -> mode-btn style from inspiration */

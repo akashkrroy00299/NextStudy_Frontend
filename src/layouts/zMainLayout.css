@@ -11,6 +11,8 @@
     height: 100vh;
     overflow-y: auto;
     min-width: 0;
+    background: var(--base-clr-01);
+    padding: 1.25rem 1.5rem;
 }
 
 .outlet-higth {
